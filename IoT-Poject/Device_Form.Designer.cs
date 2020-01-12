@@ -49,6 +49,8 @@
             // 
             this.dgv_device.AllowUserToAddRows = false;
             this.dgv_device.AllowUserToDeleteRows = false;
+            this.dgv_device.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_device.AutoGenerateColumns = false;
             this.dgv_device.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_device.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -63,7 +65,7 @@
             this.dgv_device.ReadOnly = true;
             this.dgv_device.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgv_device.RowTemplate.Height = 24;
-            this.dgv_device.Size = new System.Drawing.Size(896, 352);
+            this.dgv_device.Size = new System.Drawing.Size(1029, 352);
             this.dgv_device.TabIndex = 0;
             this.dgv_device.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_device_CellClick);
             // 
@@ -125,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 471);
+            this.ClientSize = new System.Drawing.Size(1053, 471);
             this.Controls.Add(this.dgv_device);
             this.Name = "Device_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

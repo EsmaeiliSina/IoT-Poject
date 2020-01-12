@@ -38,7 +38,7 @@
             this.btn_new.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_new.Location = new System.Drawing.Point(12, 12);
             this.btn_new.Name = "btn_new";
-            this.btn_new.Size = new System.Drawing.Size(122, 37);
+            this.btn_new.Size = new System.Drawing.Size(137, 37);
             this.btn_new.TabIndex = 0;
             this.btn_new.Text = "New Device";
             this.btn_new.UseVisualStyleBackColor = true;
@@ -49,7 +49,7 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.Location = new System.Drawing.Point(12, 55);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 37);
+            this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "Devices";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             this.btn_message.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btn_message.Location = new System.Drawing.Point(12, 98);
             this.btn_message.Name = "btn_message";
-            this.btn_message.Size = new System.Drawing.Size(122, 37);
+            this.btn_message.Size = new System.Drawing.Size(137, 37);
             this.btn_message.TabIndex = 2;
             this.btn_message.Text = "Messages";
             this.btn_message.UseVisualStyleBackColor = true;

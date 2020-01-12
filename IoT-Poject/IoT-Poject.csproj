@@ -58,6 +58,12 @@
     <Compile Include="Device_Form.Designer.cs">
       <DependentUpon>Device_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="DownlinkMessage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownlinkMessage_Form.Designer.cs">
+      <DependentUpon>DownlinkMessage_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Device_Form.resx">
       <DependentUpon>Device_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownlinkMessage_Form.resx">
+      <DependentUpon>DownlinkMessage_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

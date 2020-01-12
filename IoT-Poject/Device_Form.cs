@@ -23,25 +23,38 @@ namespace IoT_Poject
             this.tbl_DevicesTableAdapter.Fill(this.ioT_DBDataSet.tbl_Devices);
 
             DataGridViewButtonColumn sendmessage = new DataGridViewButtonColumn();
-            sendmessage.Name = "ارسال پیام";
-            sendmessage.Text = "ارسال پیام";
+            sendmessage.Name = "uplink";
+            sendmessage.Text = "uplink";
             sendmessage.UseColumnTextForButtonValue = true;
             int columnIndex = 5;
-            if (dgv_device.Columns["ارسال پیام"] == null)
+            if (dgv_device.Columns["uplink"] == null)
             {
                 dgv_device.Columns.Insert(columnIndex, sendmessage);
+            }
+
+            DataGridViewButtonColumn downlinkMesaage = new DataGridViewButtonColumn();
+            downlinkMesaage.Name = "downlink";
+            downlinkMesaage.Text = "downlink";
+            downlinkMesaage.UseColumnTextForButtonValue = true;
+            int columnIndex2 = 6;
+            if (dgv_device.Columns["downlink"] == null)
+            {
+                dgv_device.Columns.Insert(columnIndex2, downlinkMesaage);
             }
 
         }
 
         private void dgv_device_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dgv_device.Columns["ارسال پیام"].Index)
+            if (e.ColumnIndex == dgv_device.Columns["uplink"].Index)
             {
                 string deviceName = dgv_device.Rows[e.RowIndex].Cells[1].Value.ToString();
-                int code = Convert.ToInt32(dgv_device.Rows[e.RowIndex].Cells[0].Value.ToString());
-                //MessageBox.Show(deviceName);
+                int code = Convert.ToInt32(dgv_device.Rows[e.RowIndex].Cells[0].Value.ToString());     
                 new Message_Form(code , deviceName).Show();
+            }else if (e.ColumnIndex == dgv_device.Columns["downlink"].Index)
+            {
+                int code = Convert.ToInt32(dgv_device.Rows[e.RowIndex].Cells[0].Value.ToString());
+                MessageBox.Show(code.ToString());
             }
         }
     }
