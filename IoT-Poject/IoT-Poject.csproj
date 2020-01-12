@@ -46,14 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDevice.Designer.cs">
+      <DependentUpon>addDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Device_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Device_Form.Designer.cs">
+      <DependentUpon>Device_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IoT_DBDataSet.cs">
+      <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IoT_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message_Form.Designer.cs">
+      <DependentUpon>Message_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addDevice.resx">
+      <DependentUpon>addDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device_Form.resx">
+      <DependentUpon>Device_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message_Form.resx">
+      <DependentUpon>Message_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +109,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IoT_DBDataSet.xsc">
+      <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IoT_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IoT_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IoT_DBDataSet.xss">
+      <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +134,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sigfox_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\362-3629068_narrow-band-narrow-band-iot-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lora logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lora logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
