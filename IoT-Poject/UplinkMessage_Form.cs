@@ -11,18 +11,19 @@ using IoT_Poject.IoT_DBDataSetTableAdapters;
 
 namespace IoT_Poject
 {
-    public partial class DownlinkMessage_Form : Form
+    public partial class UplinkMessage_Form : Form
     {
         int code = 0;
         string name = "";
 
-        public DownlinkMessage_Form(int code , string name)
+        public UplinkMessage_Form(int code, string name)
         {
             InitializeComponent();
             this.code = code;
             this.name = name;
             tbx_code.Text = this.code.ToString();
             tbx_name.Text = this.name;
+            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -32,13 +33,13 @@ namespace IoT_Poject
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            tbl_downlinkmessagesTableAdapter messageTable = new tbl_downlinkmessagesTableAdapter();
+            tbl_uplinkmessagesTableAdapter messageTable = new tbl_uplinkmessagesTableAdapter();
 
             string protocol = "";
 
             if (rbtn_sigfox.Checked)
             {
-                if (System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text) <= 8)
+                if (System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text) <= 12)
                 {
                     protocol = "Sigfox";
                     messageTable.Insert(this.code, protocol, tbx_message.Text);
@@ -50,7 +51,7 @@ namespace IoT_Poject
                     MessageBox.Show("طول پیام بیش از حد مجاز", "اخطار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
+            
             if (rbtn_lora.Checked)
             {
                 if (System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text) <= 243)
@@ -80,11 +81,13 @@ namespace IoT_Poject
                     MessageBox.Show("طول پیام بیش از حد مجاز", "اخطار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+           
         }
 
         private void rbtn_sigfox_CheckedChanged(object sender, EventArgs e)
         {
-            tbx_max.Text = "8 بایت";
+            tbx_max.Text = "12 بایت";
         }
 
         private void rbtn_lora_CheckedChanged(object sender, EventArgs e)
@@ -98,7 +101,7 @@ namespace IoT_Poject
         }
 
         private void tbx_message_TextChanged(object sender, EventArgs e)
-        {
+        {     
             tbx_lengh.Text = System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text).ToString() + " بایت ";
         }
     }

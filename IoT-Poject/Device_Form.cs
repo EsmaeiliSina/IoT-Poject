@@ -50,11 +50,13 @@ namespace IoT_Poject
             {
                 string deviceName = dgv_device.Rows[e.RowIndex].Cells[1].Value.ToString();
                 int code = Convert.ToInt32(dgv_device.Rows[e.RowIndex].Cells[0].Value.ToString());     
-                new Message_Form(code , deviceName).Show();
+                new UplinkMessage_Form(code , deviceName).Show();
             }else if (e.ColumnIndex == dgv_device.Columns["downlink"].Index)
             {
+                string deviceName = dgv_device.Rows[e.RowIndex].Cells[1].Value.ToString();
                 int code = Convert.ToInt32(dgv_device.Rows[e.RowIndex].Cells[0].Value.ToString());
-                MessageBox.Show(code.ToString());
+                new DownlinkMessage_Form(code, deviceName).Show();
+                //MessageBox.Show(code.ToString());
             }
         }
     }

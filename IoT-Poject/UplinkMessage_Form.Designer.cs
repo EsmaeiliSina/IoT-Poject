@@ -1,6 +1,6 @@
 ﻿namespace IoT_Poject
 {
-    partial class Message_Form
+    partial class UplinkMessage_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -220,10 +220,11 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "طول پیام";
             // 
-            // Message_Form
+            // UplinkMessage_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(605, 216);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbx_lengh);
@@ -238,9 +239,9 @@
             this.Controls.Add(this.lbl_code);
             this.Controls.Add(this.tbx_message);
             this.Controls.Add(this.groupBox);
-            this.Name = "Message_Form";
+            this.Name = "UplinkMessage_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "پیام";
+            this.Text = "ارسال پیام به سرور";
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);

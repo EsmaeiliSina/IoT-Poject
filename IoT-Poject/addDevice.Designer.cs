@@ -33,11 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbx_name = new System.Windows.Forms.TextBox();
-            this.tbx_distance = new System.Windows.Forms.TextBox();
             this.tbx_describtion = new System.Windows.Forms.TextBox();
             this.tbx_type = new System.Windows.Forms.TextBox();
             this.btn_COnfirm = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.rbtn_city = new System.Windows.Forms.RadioButton();
+            this.rbtn_urban = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lbl_name
@@ -64,11 +65,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("B Zar", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(250, 121);
+            this.label2.Location = new System.Drawing.Point(292, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 34);
+            this.label2.Size = new System.Drawing.Size(47, 34);
             this.label2.TabIndex = 2;
-            this.label2.Text = "(km)فاصله ";
+            this.label2.Text = "منطقه";
             // 
             // label3
             // 
@@ -89,16 +90,6 @@
             this.tbx_name.TabIndex = 0;
             this.tbx_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbx_distance
-            // 
-            this.tbx_distance.Font = new System.Drawing.Font("B Zar", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.tbx_distance.Location = new System.Drawing.Point(12, 121);
-            this.tbx_distance.Name = "tbx_distance";
-            this.tbx_distance.Size = new System.Drawing.Size(232, 36);
-            this.tbx_distance.TabIndex = 2;
-            this.tbx_distance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbx_distance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_distance_KeyPress);
-            // 
             // tbx_describtion
             // 
             this.tbx_describtion.Font = new System.Drawing.Font("B Zar", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -106,7 +97,7 @@
             this.tbx_describtion.Multiline = true;
             this.tbx_describtion.Name = "tbx_describtion";
             this.tbx_describtion.Size = new System.Drawing.Size(232, 82);
-            this.tbx_describtion.TabIndex = 3;
+            this.tbx_describtion.TabIndex = 4;
             this.tbx_describtion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbx_type
@@ -124,7 +115,7 @@
             this.btn_COnfirm.Location = new System.Drawing.Point(12, 267);
             this.btn_COnfirm.Name = "btn_COnfirm";
             this.btn_COnfirm.Size = new System.Drawing.Size(113, 34);
-            this.btn_COnfirm.TabIndex = 4;
+            this.btn_COnfirm.TabIndex = 5;
             this.btn_COnfirm.Text = "تایید";
             this.btn_COnfirm.UseVisualStyleBackColor = true;
             this.btn_COnfirm.Click += new System.EventHandler(this.btn_COnfirm_Click);
@@ -135,21 +126,48 @@
             this.btn_exit.Location = new System.Drawing.Point(131, 267);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(113, 34);
-            this.btn_exit.TabIndex = 5;
+            this.btn_exit.TabIndex = 6;
             this.btn_exit.Text = "خروج";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // rbtn_city
+            // 
+            this.rbtn_city.AutoSize = true;
+            this.rbtn_city.Font = new System.Drawing.Font("B Zar", 12F);
+            this.rbtn_city.Location = new System.Drawing.Point(171, 121);
+            this.rbtn_city.Name = "rbtn_city";
+            this.rbtn_city.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbtn_city.Size = new System.Drawing.Size(73, 38);
+            this.rbtn_city.TabIndex = 2;
+            this.rbtn_city.TabStop = true;
+            this.rbtn_city.Text = "شهری";
+            this.rbtn_city.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_urban
+            // 
+            this.rbtn_urban.AutoSize = true;
+            this.rbtn_urban.Font = new System.Drawing.Font("B Zar", 12F);
+            this.rbtn_urban.Location = new System.Drawing.Point(80, 121);
+            this.rbtn_urban.Name = "rbtn_urban";
+            this.rbtn_urban.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbtn_urban.Size = new System.Drawing.Size(85, 38);
+            this.rbtn_urban.TabIndex = 3;
+            this.rbtn_urban.TabStop = true;
+            this.rbtn_urban.Text = "روستایی";
+            this.rbtn_urban.UseVisualStyleBackColor = true;
             // 
             // addDevice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 313);
+            this.Controls.Add(this.rbtn_urban);
+            this.Controls.Add(this.rbtn_city);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_COnfirm);
             this.Controls.Add(this.tbx_type);
             this.Controls.Add(this.tbx_describtion);
-            this.Controls.Add(this.tbx_distance);
             this.Controls.Add(this.tbx_name);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,10 +188,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbx_name;
-        private System.Windows.Forms.TextBox tbx_distance;
         private System.Windows.Forms.TextBox tbx_describtion;
         private System.Windows.Forms.TextBox tbx_type;
         private System.Windows.Forms.Button btn_COnfirm;
         private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.RadioButton rbtn_city;
+        private System.Windows.Forms.RadioButton rbtn_urban;
     }
 }

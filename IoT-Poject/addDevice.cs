@@ -25,9 +25,17 @@ namespace IoT_Poject
 
         private void btn_COnfirm_Click(object sender, EventArgs e)
         {
+            bool range = true;
+            if (rbtn_city.Checked)
+            {
+                range = true;
+            }
+            else if (rbtn_urban.Checked)
+            {
+                range = false;
+            }
             tbl_DevicesTableAdapter deviceTable = new tbl_DevicesTableAdapter();
-
-            deviceTable.Insert1(tbx_name.Text, tbx_type.Text, Convert.ToInt32(tbx_distance.Text), tbx_describtion.Text);
+            deviceTable.Insert(tbx_name.Text,tbx_type.Text,range,tbx_describtion.Text);
             MessageBox.Show("دستگاه با موفقیت اضافه شد","تایید", MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
 
