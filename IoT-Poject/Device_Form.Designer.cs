@@ -30,19 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_device = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.describtionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblDevicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ioTDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ioT_DBDataSet = new IoT_Poject.IoT_DBDataSet();
             this.tbl_DevicesTableAdapter = new IoT_Poject.IoT_DBDataSetTableAdapters.tbl_DevicesTableAdapter();
+            this.tblDevicesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityurban = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.describtionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_device)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblDevicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioTDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioT_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDevicesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_device
@@ -57,9 +59,9 @@
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn,
-            this.distanceDataGridViewTextBoxColumn,
+            this.cityurban,
             this.describtionDataGridViewTextBoxColumn});
-            this.dgv_device.DataSource = this.tblDevicesBindingSource;
+            this.dgv_device.DataSource = this.tblDevicesBindingSource1;
             this.dgv_device.Location = new System.Drawing.Point(12, 107);
             this.dgv_device.Name = "dgv_device";
             this.dgv_device.ReadOnly = true;
@@ -68,6 +70,30 @@
             this.dgv_device.Size = new System.Drawing.Size(1029, 352);
             this.dgv_device.TabIndex = 0;
             this.dgv_device.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_device_CellClick);
+            // 
+            // tblDevicesBindingSource
+            // 
+            this.tblDevicesBindingSource.DataMember = "tbl_Devices";
+            this.tblDevicesBindingSource.DataSource = this.ioTDBDataSetBindingSource;
+            // 
+            // ioTDBDataSetBindingSource
+            // 
+            this.ioTDBDataSetBindingSource.DataSource = this.ioT_DBDataSet;
+            this.ioTDBDataSetBindingSource.Position = 0;
+            // 
+            // ioT_DBDataSet
+            // 
+            this.ioT_DBDataSet.DataSetName = "IoT_DBDataSet";
+            this.ioT_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbl_DevicesTableAdapter
+            // 
+            this.tbl_DevicesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblDevicesBindingSource1
+            // 
+            this.tblDevicesBindingSource1.DataMember = "tbl_Devices";
+            this.tblDevicesBindingSource1.DataSource = this.ioTDBDataSetBindingSource;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -90,12 +116,12 @@
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // distanceDataGridViewTextBoxColumn
+            // cityurban
             // 
-            this.distanceDataGridViewTextBoxColumn.DataPropertyName = "distance";
-            this.distanceDataGridViewTextBoxColumn.HeaderText = "فاصله (km)";
-            this.distanceDataGridViewTextBoxColumn.Name = "distanceDataGridViewTextBoxColumn";
-            this.distanceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cityurban.DataPropertyName = "cityurban";
+            this.cityurban.HeaderText = "منطقه(شهری)";
+            this.cityurban.Name = "cityurban";
+            this.cityurban.ReadOnly = true;
             // 
             // describtionDataGridViewTextBoxColumn
             // 
@@ -103,25 +129,6 @@
             this.describtionDataGridViewTextBoxColumn.HeaderText = "توضیحات";
             this.describtionDataGridViewTextBoxColumn.Name = "describtionDataGridViewTextBoxColumn";
             this.describtionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tblDevicesBindingSource
-            // 
-            this.tblDevicesBindingSource.DataMember = "tbl_Devices";
-            this.tblDevicesBindingSource.DataSource = this.ioTDBDataSetBindingSource;
-            // 
-            // ioTDBDataSetBindingSource
-            // 
-            this.ioTDBDataSetBindingSource.DataSource = this.ioT_DBDataSet;
-            this.ioTDBDataSetBindingSource.Position = 0;
-            // 
-            // ioT_DBDataSet
-            // 
-            this.ioT_DBDataSet.DataSetName = "IoT_DBDataSet";
-            this.ioT_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbl_DevicesTableAdapter
-            // 
-            this.tbl_DevicesTableAdapter.ClearBeforeFill = true;
             // 
             // Device_Form
             // 
@@ -137,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblDevicesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioTDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ioT_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDevicesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,10 +156,12 @@
         private IoT_DBDataSet ioT_DBDataSet;
         private System.Windows.Forms.BindingSource tblDevicesBindingSource;
         private IoT_DBDataSetTableAdapters.tbl_DevicesTableAdapter tbl_DevicesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tblDevicesBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn distanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cityurban;
         private System.Windows.Forms.DataGridViewTextBoxColumn describtionDataGridViewTextBoxColumn;
     }
 }
