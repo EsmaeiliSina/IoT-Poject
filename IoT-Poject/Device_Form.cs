@@ -26,7 +26,7 @@ namespace IoT_Poject
             sendmessage.Name = "uplink";
             sendmessage.Text = "uplink";
             sendmessage.UseColumnTextForButtonValue = true;
-            int columnIndex = 5;
+            int columnIndex = 6;
             if (dgv_device.Columns["uplink"] == null)
             {
                 dgv_device.Columns.Insert(columnIndex, sendmessage);
@@ -36,12 +36,13 @@ namespace IoT_Poject
             downlinkMesaage.Name = "downlink";
             downlinkMesaage.Text = "downlink";
             downlinkMesaage.UseColumnTextForButtonValue = true;
-            int columnIndex2 = 6;
+            int columnIndex2 = 7;
             if (dgv_device.Columns["downlink"] == null)
             {
                 dgv_device.Columns.Insert(columnIndex2, downlinkMesaage);
             }
-
+            dgv_device.Update();
+            dgv_device.Refresh();
         }
 
         private void dgv_device_CellClick(object sender, DataGridViewCellEventArgs e)

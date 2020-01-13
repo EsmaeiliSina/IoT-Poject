@@ -35,7 +35,7 @@ namespace IoT_Poject
                 range = false;
             }
             tbl_DevicesTableAdapter deviceTable = new tbl_DevicesTableAdapter();
-            deviceTable.Insert(tbx_name.Text,tbx_type.Text,range,tbx_describtion.Text);
+            deviceTable.InsertQuery(tbx_name.Text,tbx_type.Text,range,tbx_describtion.Text,100);
             MessageBox.Show("دستگاه با موفقیت اضافه شد","تایید", MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
 

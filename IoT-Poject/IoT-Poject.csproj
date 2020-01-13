@@ -64,7 +64,10 @@
     <Compile Include="DownlinkMessage_Form.Designer.cs">
       <DependentUpon>DownlinkMessage_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="IoT_DBDataSet.Designer.cs">
+    <Compile Include="IoT_DBDataSet.cs">
+      <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IoT_DBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>
@@ -122,8 +125,8 @@
     </None>
     <None Include="IoT_DBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IoT_DBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>IoT_DBDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="IoT_DBDataSet.xss">
       <DependentUpon>IoT_DBDataSet.xsd</DependentUpon>

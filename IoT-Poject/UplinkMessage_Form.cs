@@ -34,6 +34,7 @@ namespace IoT_Poject
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             tbl_uplinkmessagesTableAdapter messageTable = new tbl_uplinkmessagesTableAdapter();
+            tbl_DevicesTableAdapter deviceTable = new tbl_DevicesTableAdapter();
 
             string protocol = "";
 
@@ -43,6 +44,7 @@ namespace IoT_Poject
                 {
                     protocol = "Sigfox";
                     messageTable.Insert(this.code, protocol, tbx_message.Text);
+                    deviceTable.minusbattery(4E-7F,this.code);
                     MessageBox.Show("پیام ارسال شد", "تایید", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -58,6 +60,7 @@ namespace IoT_Poject
                 {
                     protocol = "LoRa";
                     messageTable.Insert(this.code, protocol, tbx_message.Text);
+                    deviceTable.minusbattery(8E-7F, this.code);
                     MessageBox.Show("پیام ارسال شد", "تایید", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -73,7 +76,9 @@ namespace IoT_Poject
                 {
                     protocol = "NB-IoT";
                     messageTable.Insert(this.code, protocol, tbx_message.Text);
+                    deviceTable.minusbattery(Convert.ToDouble(System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text).ToString()) * 1.3E-4,this.code);
                     MessageBox.Show("پیام ارسال شد", "تایید", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     this.Close();
                 }
                 else

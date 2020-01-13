@@ -26,7 +26,7 @@ namespace IoT_Poject
             
             tbx_sigfoxup.Text = uplinkMessage.count("Sigfox").ToString();
             tbx_lora_up.Text  = uplinkMessage.count("LoRa").ToString();
-            tbx_nbiot_up.Text = uplinkMessage.count("'NB-IoT'").ToString();
+            tbx_nbiot_up.Text = uplinkMessage.count("NB-IoT").ToString();
 
             tbx_sigfoxdown.Text = downlinkMessage.count("Sigfox").ToString();
             tbx_lora_down.Text = downlinkMessage.count("LoRa").ToString();
