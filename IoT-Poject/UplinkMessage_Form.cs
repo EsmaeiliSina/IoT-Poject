@@ -78,7 +78,6 @@ namespace IoT_Poject
                     messageTable.Insert(this.code, protocol, tbx_message.Text);
                     deviceTable.minusbattery(Convert.ToDouble(System.Text.Encoding.UTF8.GetByteCount(tbx_message.Text).ToString()) * 1.3E-4,this.code);
                     MessageBox.Show("پیام ارسال شد", "تایید", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
                     this.Close();
                 }
                 else

@@ -52,6 +52,12 @@
     <Compile Include="addDevice.Designer.cs">
       <DependentUpon>addDevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="BatteryUsage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatteryUsage_Form.Designer.cs">
+      <DependentUpon>BatteryUsage_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Device_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     <Compile Include="Messages.Designer.cs">
       <DependentUpon>Messages.cs</DependentUpon>
     </Compile>
+    <Compile Include="sentMessages_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sentMessages_Form.Designer.cs">
+      <DependentUpon>sentMessages_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="UplinkMessage_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="addDevice.resx">
       <DependentUpon>addDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatteryUsage_Form.resx">
+      <DependentUpon>BatteryUsage_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Device_Form.resx">
       <DependentUpon>Device_Form.cs</DependentUpon>
@@ -106,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Messages.resx">
       <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sentMessages_Form.resx">
+      <DependentUpon>sentMessages_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UplinkMessage_Form.resx">
       <DependentUpon>UplinkMessage_Form.cs</DependentUpon>

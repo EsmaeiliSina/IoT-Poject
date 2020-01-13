@@ -36,5 +36,10 @@ namespace IoT_Poject
         {
             new Messages().Show();
         }
+
+        private void btn_allmessage_Click(object sender, EventArgs e)
+        {
+            new sentMessages_Form().Show();
+        }
     }
 }
